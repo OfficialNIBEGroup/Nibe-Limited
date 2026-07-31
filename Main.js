@@ -503,17 +503,160 @@ el.classList.add("active");
 
 const speechVideo = document.getElementById("speechVideo");
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            speechVideo.currentTime = 0;
-            speechVideo.play();
-        } else {
-            speechVideo.pause();
-        }
+if (speechVideo) {
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                speechVideo.currentTime = 0;
+                speechVideo.play();
+            } else {
+                speechVideo.pause();
+            }
+        });
+    }, {
+        threshold: 0.5
     });
-}, {
-    threshold: 0.5
+
+    observer.observe(speechVideo);
+
+}
+
+
+
+/*====================================================
+        TRIGON VIDEO AUTOPLAY ON SCROLL
+====================================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const trigonVideo = document.getElementById("trigonVideo");
+
+    if (!trigonVideo) return;
+
+    const observer = new IntersectionObserver(function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                trigonVideo.play().catch(function (error) {
+                    console.log("Autoplay blocked:", error);
+                });
+
+            } else {
+
+                trigonVideo.pause();
+                trigonVideo.currentTime = 0;
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.5
+    });
+
+    observer.observe(trigonVideo);
+
 });
 
-observer.observe(speechVideo);
+// Each ".accordion" wrapper (Defence Manufacturing, AutoCAD & SolidWorks,
+// Military Software and AI Development, etc.) behaves as its own independent
+// group, so opening a tab in one section no longer closes tabs in another.
+document.querySelectorAll(".accordion").forEach(accordion => {
+
+    const accordionItems = accordion.querySelectorAll(".accordion-item");
+
+    accordionItems.forEach(item => {
+
+        const header = item.querySelector(".accordion-header");
+        const content = item.querySelector(".accordion-content");
+        const icon = header ? header.querySelector("span") : null;
+
+        if (!header || !content) return;
+
+        header.addEventListener("click", () => {
+
+            const isActive = item.classList.contains("active");
+
+            // Close all accordion items within this section only
+            accordionItems.forEach(i => {
+                i.classList.remove("active");
+                const iContent = i.querySelector(".accordion-content");
+                const iIcon = i.querySelector(".accordion-header span");
+                if (iContent) iContent.style.display = "none";
+                if (iIcon) iIcon.textContent = "+";
+            });
+
+            // If clicked tab was already open, just keep all tabs closed
+            if (!isActive) {
+                item.classList.add("active");
+                content.style.display = "block";
+                if (icon) icon.textContent = "−";
+            }
+
+            // Right-hand preview image intentionally stays fixed on its
+            // original image regardless of which tab is clicked.
+
+        });
+
+    });
+
+});
+
+        const slider = document.getElementById("visionSlider");
+        const cards = document.querySelectorAll(".vision-card");
+
+        let cardWidth = cards[0].offsetWidth + 40; // card width + gap
+        let autoSlide;
+
+        // Auto Scroll
+        function startAutoSlide() {
+            autoSlide = setInterval(() => {
+
+                if (
+                    slider.scrollLeft + slider.clientWidth >=
+                    slider.scrollWidth - 10
+                ) {
+                    slider.scrollTo({
+                        left: 0,
+                        behavior: "smooth"
+                    });
+                } else {
+                    slider.scrollBy({
+                        left: cardWidth,
+                        behavior: "smooth"
+                    });
+                }
+
+            }, 3000);
+        }
+
+        // Stop Auto Scroll
+        function stopAutoSlide() {
+            clearInterval(autoSlide);
+        }
+
+        startAutoSlide();
+
+        /* Stop when mouse enters slider */
+        slider.addEventListener("mouseenter", stopAutoSlide);
+
+        /* Resume when mouse leaves */
+        slider.addEventListener("mouseleave", startAutoSlide);
+
+        /* Arrow Buttons */
+        document.querySelector(".next").addEventListener("click", () => {
+            slider.scrollBy({
+                left: cardWidth,
+                behavior: "smooth"
+            });
+        });
+
+        document.querySelector(".prev").addEventListener("click", () => {
+            slider.scrollBy({
+                left: -cardWidth,
+                behavior: "smooth"
+            });
+        });
