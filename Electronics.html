@@ -9,6 +9,8 @@
     <title>Land Systems | NIBE Limited</title>
 
     <link rel="stylesheet" href="Style.css">
+    <link rel="preload" as="image" href="Nibe Limited Logo/NIBE Group Logo.png">
+    <script src="image-perf.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/png" href="Nibe Limited Logo/NIBE Group Logo.png">
     <!-- Google Font -->
@@ -22,7 +24,7 @@
 <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="Nibe Limited Logo/NIBE Group Logo.png" alt="NIBE Logo">
+                <img src="Nibe Limited Logo/NIBE Group Logo.png" alt="NIBE Logo" fetchpriority="high" decoding="async" loading="eager">
             </div>
 
             <ul class="nav-links">
@@ -716,7 +718,7 @@
             <span class="product-tag">ELECTRONICS DIVISION</span>
             <h2 style="font-size:45px; color:#1b3764; margin:18px 0; font-weight:700">  <u>Electronic Testing Facility</u></h2>
 
-            <p>Electronics Testing Facility at Shirdi established in 5 Lakh sq.ft Area</p>
+            <p>Electronics Testing Facility at Shirdi being established across a 5 lakh sq. ft. Area</p>
             <h2>EMI / EMC Testing Laboratory</h2>
 
             <p>
@@ -793,9 +795,9 @@
             <div class="electronics-left" style="margin-top: 3%;">
                 <div class="env-gallery">
                     <div class="env-gallery-main">
-                        <img src="Electronics Img/emi emc lab.png" alt="EMI EMC LAB">
-                        <img src="Electronics Img/lab.png" alt="EMI EMC LAB">
-                        <img src="Electronics Img/anerobic chamber.png" alt="EMI EMC LAB">
+                        <img src="Electronics Img/emi emc lab.jpg" alt="EMI EMC LAB">
+                        <img src="Electronics Img/lab.jpg" alt="EMI EMC LAB">
+                        <img src="Electronics Img/anerobic chamber.jpg" alt="EMI EMC LAB">
                     </div>
                 </div>
             </div>       
@@ -906,9 +908,9 @@
         <div class="electronics-left" style="margin-top: 3%;">
             <div class="env-gallery">
                 <div class="env-gallery-main">
-                    <img src="Electronics Img/nvironmental test.png" alt="Environmental & Dynamic Test Laboratory">
-                    <img src="Electronics Img/climatic test.png" alt="Climatic Test Chamber">
-                    <img src="Electronics Img/dynamic test.png" alt="Dynamic Vibration Test System">
+                    <img src="Electronics Img/nvironmental test.jpg" alt="Environmental & Dynamic Test Laboratory">
+                    <img src="Electronics Img/climatic test.jpg" alt="Climatic Test Chamber">
+                    <img src="Electronics Img/dynamic test.jpg" alt="Dynamic Vibration Test System">
                 </div>
             </div>
         </div>

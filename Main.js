@@ -314,6 +314,12 @@ function backToCorporateGovernance(){
 }
 
 
+function showSP2026(){
+
+    document.getElementById("ShareholdingPattern").style.display = "none";
+    document.getElementById("sp2026Page").style.display = "block";
+}
+
 function showSP2025(){
 
     document.getElementById("ShareholdingPattern").style.display = "none";
@@ -339,7 +345,7 @@ function showSP2022(){
 }
 
 function backToShareholdingPattern(){
-
+document.getElementById("sp2026Page").style.display = "none";
     document.getElementById("sp2025Page").style.display = "none";
     document.getElementById("sp2024Page").style.display = "none";
     document.getElementById("sp2023Page").style.display = "none";

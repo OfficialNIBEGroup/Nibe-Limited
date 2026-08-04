@@ -9,6 +9,8 @@
     <title>Air Systems | NIBE Limited</title>
 
     <link rel="stylesheet" href="Style.css">
+    <link rel="preload" as="image" href="Nibe Limited Logo/NIBE Group Logo.png">
+    <script src="image-perf.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/png" href="Nibe Limited Logo/NIBE Group Logo.png">
     <!-- Google Font -->
@@ -22,7 +24,7 @@
 <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="Nibe Limited Logo/NIBE Group Logo.png" alt="NIBE Logo">
+                <img src="Nibe Limited Logo/NIBE Group Logo.png" alt="NIBE Logo" fetchpriority="high" decoding="async" loading="eager">
             </div>
 
             <ul class="nav-links">
@@ -307,7 +309,7 @@
     <div class="cuas-intro">
 
         <div class="cuas-image-card">
-            <img src="Airforce Systems Img/C-UAS-Technology.png" alt="C-UAS Counter-Drone Technology">
+            <img src="Airforce Systems Img/C-UAS-Technology.jpg" alt="C-UAS Counter-Drone Technology">
         </div>
 
         <div class="cuas-content">

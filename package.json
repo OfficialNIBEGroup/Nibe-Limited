@@ -1,0 +1,17 @@
+{
+  "name": "nibe-limited-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Main.js",
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "png-to-jpg": "node scripts/png-to-jpg.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
+}

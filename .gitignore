@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.npm
+
+# Vercel
+.vercel
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+.vscode/
+.idea/
+
+# Env
+.env
+.env.*
+!.env.example
+
+.vercel
+.env*
