@@ -1,4 +1,29 @@
 /* ===== Global ===== */
+
+/* Smooth image loading (used with image-perf.js) */
+img.img-loading {
+    opacity: 0.15;
+    filter: blur(6px);
+    transition: opacity 0.4s ease, filter 0.45s ease;
+    background: #e8eef5;
+}
+
+img.img-loaded {
+    opacity: 1;
+    filter: none;
+    background: none;
+}
+
+/* Logo / above-the-fold: never blank while loading */
+img.img-critical,
+.logo img,
+.navbar img {
+    opacity: 1 !important;
+    filter: none !important;
+    background: none !important;
+    transition: none;
+}
+
 /* ===== Header ===== */
 .nav-links li{
     position:relative;
@@ -3640,16 +3665,7 @@ li{
     color:#374151;
     line-height:1.6;
 }
-li::before{
-    content:"";
-    width:8px;
-    height:8px;
-    background:#145da0;
-    position:absolute;
-    left:0;
-    top:9px;
-    border-radius:50%;
-}
+
 /* INFORMATION */
 .info{
     margin-top:35px;

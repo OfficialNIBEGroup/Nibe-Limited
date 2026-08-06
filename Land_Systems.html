@@ -9,6 +9,8 @@
     <title>Land Systems | NIBE Limited</title>
 
     <link rel="stylesheet" href="Style.css">
+    <link rel="preload" as="image" href="Nibe Limited Logo/NIBE Group Logo.png">
+    <script src="image-perf.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
      <link rel="icon" type="image/png" href="Nibe Limited Logo/NIBE Group Logo.png">
     <!-- Google Font -->
@@ -22,7 +24,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="Nibe Limited Logo/NIBE Group Logo.png" alt="NIBE Logo">
+                <img src="Nibe Limited Logo/NIBE Group Logo.png" alt="NIBE Logo" fetchpriority="high" decoding="async" loading="eager">
             </div>
 
             <ul class="nav-links">
@@ -130,13 +132,13 @@
 
             <a href="#vayuastra">VayuAstra Series</a>
 
-            <a href="#nagaastra">NagaAstra</a>
+            <a href="#VajrAstra">VajrAstra</a>
 
             <a href="#counter">Counter-UAS</a>
 
             <a href="#proximity_fuze">30mm proximity fuze</a>
 
-            <a href="#Lakshya-vedh">LakshyaVedh (Course Correction Fuse)</a>
+            <a href="#Lakshya-vedh">LakshyaBhed (Course Correction Fuse)</a>
 
             <a href="#pinka">Pinaka</a>
 
@@ -212,7 +214,7 @@
 
             <div class="video-box">
 
-                <video autoplay muted loop playsinline>
+                <video autoplay muted loop playsinline preload="metadata">
                     <source src="Land System Vdo/SuryaAstra.mp4" type="video/mp4">
                 </video>
 
@@ -220,7 +222,7 @@
 
             <div class="video-box">
 
-                <video autoplay muted loop playsinline>
+                <video autoplay muted loop playsinline preload="metadata">
                     <source src="Land System Vdo/SuryaAstra2.mp4" type="video/mp4">
                 </video>
 
@@ -308,7 +310,7 @@
 
             <div class="video-box">
 
-            <video autoplay muted loop playsinline>
+            <video autoplay muted loop playsinline preload="metadata">
                 <source src="Land System Vdo/GarudaAstra.mp4" type="video/mp4">
             </video>
 
@@ -413,7 +415,7 @@
 
             <div class="video-box">
 
-            <video autoplay muted loop playsinline>
+            <video autoplay muted loop playsinline preload="metadata">
                 <source src="Land System Vdo/Vayuastra Series.mp4" type="video/mp4">
             </video>
 
@@ -555,7 +557,7 @@
         HAILSTORM SECTION
 ===================================================-->
 
-<section id="nagaastra" class="vayuastra-section">
+<section id="VajrAstra" class="vayuastra-section">
 
     <div class="vayua-container">
 
@@ -564,7 +566,7 @@
         <div class="vayua-images">
 
             <img src="Land System Img/NagaAstra.jpg"
-                 alt="NagaAstra Nibe 130mm PGM Launch">
+                 alt="VajrAstra Nibe 130mm PGM Launch">
 
         </div>
 
@@ -576,7 +578,7 @@
                 LAND SYSTEM
             </span>
 
-            <h2>NagaAstra</h2>
+            <h2>VajrAstra</h2>
 
             <h5>
                 Light Multi-Purpose Launch Guided Missile System
@@ -589,7 +591,7 @@
                 tactical combat units to operate within an independent,
                 fast-fire network, delivering immediate response.<br>
 
-                ✦ The NagaAstra <strong>130mm PGM</strong>
+                ✦ The VajrAstra <strong>130mm PGM</strong>
                 (precision-guided munition) system delivers highly precise,
                 cost-effective advanced munitions designed for maximum
                 lethality and effectiveness while minimizing collateral
@@ -709,7 +711,7 @@
 
         <div class="video-box">
 
-            <video autoplay muted loop playsinline controls>
+            <video autoplay muted loop playsinline preload="metadata" controls>
 
                 <source src="Land System Vdo/CounterUAS.mp4"
                         type="video/mp4">
@@ -803,7 +805,7 @@
 
         <div class="video-box">
 
-            <video autoplay muted loop playsinline controls>
+            <video autoplay muted loop playsinline preload="metadata" controls>
 
                 <source src="Land System Vdo/ProximityFuze.mp4"
                         type="video/mp4">
@@ -828,7 +830,7 @@
             LAND SYSTEM
         </span>
 
-        <h2>LakshyaVedh</h2>
+        <h2>LakshyaBhed</h2>
         <h5> (Course Correction Fuse)</h5>
 
     </div>
@@ -836,7 +838,7 @@
     <div class="silver-image">
 
         <img src="Land System Img/Lakshyavedh.jpg"
-             alt="Lakshyavedh">
+             alt="LakshyaBhed">
 
     </div>
 
@@ -897,9 +899,8 @@
             </li>
 
             <li>
-                Capable of launching rockets with strike ranges from
-                <strong>40, 75, 150 & 300km</strong>, delivering precision and area
-                saturation capability.
+                Capability being developed to launch rockets with strike ranges of
+                <strong>40, 75, 150 & 300km</strong>, enabling both precision strike and area saturation missions.
             </li>
 
             <li>
@@ -1143,9 +1144,9 @@
 
             <h4>Business Enquiries</h4>
 
-            <p><strong>Wg Cdr Mohit Rawat (Retd)</strong></p>
+            <p><strong>Col Annu Srivastava (Retd.)</strong></p>
 
-            <p>GM - Business Development </br>(Air Systems)</p>
+            <p>Head – Business Development</br>(Land system)</p>
 
             <a href="tel:+912069133799">
                 Corporate Office Pune: 020 6913 3799

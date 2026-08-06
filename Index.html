@@ -9,6 +9,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Nibe Limited Logo/NIBE Group Logo.png">
     <link rel="stylesheet" href="Style.css">
+    <link rel="preload" as="image" href="Nibe Limited Logo/NIBE Group Logo.png">
+    <script src="image-perf.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -19,7 +21,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="Nibe Limited Logo/NIBE Group Logo.png" alt="NIBE Logo">
+                <img src="Nibe Limited Logo/NIBE Group Logo.png" alt="NIBE Logo" fetchpriority="high" decoding="async" loading="eager">
             </div>
 
             <ul class="nav-links">
@@ -97,7 +99,7 @@
 <section class="hero hero-home">
 
     <!-- Background Video -->
-    <video autoplay muted loop playsinline class="hero-bg-video">
+    <video autoplay muted loop playsinline class="hero-bg-video" preload="metadata" poster="Home Banner/Home-Screen-Img.jpg">
         <source src="Home Banner/Home Banner.mp4" type="video/mp4">
     </video>
 
@@ -469,8 +471,8 @@
                             structural integrity for high-performance defence components. </p>
 
                         <div style="display:flex; gap:10px;">
-                            <img loading="lazy" src="Defence Manufacturing Img/Cutting1.png" alt="Fiber Laser Cutting Machine" style="width:50%; margin:0;">
-                            <img loading="lazy" src="Defence Manufacturing Img/Cutting2.png" alt="TruLaser Cutting Machine" style="width:50%; margin:0;">
+                            <img loading="lazy" src="Defence Manufacturing Img/Cutting1.jpg" alt="Fiber Laser Cutting Machine" style="width:50%; margin:0;">
+                            <img loading="lazy" src="Defence Manufacturing Img/Cutting2.jpg" alt="TruLaser Cutting Machine" style="width:50%; margin:0;">
                         </div>
                     </div>
 
@@ -489,7 +491,7 @@
                             enabling mass production with rigorous quality control.
                         </p>
 
-                        <img loading="lazy" src="Defence Manufacturing Img/fabricationn.png" alt="">
+                        <img loading="lazy" src="Defence Manufacturing Img/fabricationn.jpg" alt="">
                     </div>
 
                 </div>
@@ -526,8 +528,8 @@
                         </p>
 
                         <div style="display:flex; gap:10px;">
-                            <img loading="lazy" src="Defence Manufacturing Img/VMC machine back.png" alt="Fiber Laser Cutting Machine" style="width:50%; margin:0;">
-                            <img loading="lazy" src="Defence Manufacturing Img/VMC machine front.png" alt="TruLaser Cutting Machine" style="width:50%; margin:0;">
+                            <img loading="lazy" src="Defence Manufacturing Img/VMC machine back.jpg" alt="Fiber Laser Cutting Machine" style="width:50%; margin:0;">
+                            <img loading="lazy" src="Defence Manufacturing Img/VMC machine front.jpg" alt="TruLaser Cutting Machine" style="width:50%; margin:0;">
                         </div>
                     </div>
 
@@ -549,7 +551,7 @@
   
                         </p>
 
-                        <img loading="lazy" src="Defence Manufacturing Img/bending machine.png" alt="">
+                        <img loading="lazy" src="Defence Manufacturing Img/bending machine.jpg" alt="">
                     </div>
 
                 </div>
@@ -561,7 +563,7 @@
         <div class="capabilities-right">
             
 
-            <img id="mainCapabilityImage" loading="lazy" src="Defence Manufacturing Img/Home.png"
+            <img id="mainCapabilityImage" loading="lazy" src="Defence Manufacturing Img/Home.jpg"
                 alt="Defence Manufacturing">
 
         </div>
@@ -595,7 +597,7 @@
                             models that guide accurate production processes.
                         </p>
 
-                        <img loading="lazy" src="Engineering and Design Img/AutoCAD.png" alt="">
+                        <img loading="lazy" src="Engineering and Design Img/AutoCAD.jpg" alt="">
                     </div>
 
                 </div>
@@ -613,7 +615,7 @@
                             production efficiency.
                         </p>
 
-                        <img loading="lazy" src="Engineering and Design Img/nesting.png" alt="">
+                        <img loading="lazy" src="Engineering and Design Img/nesting.jpg" alt="">
                     </div>
 
                 </div>
@@ -631,7 +633,7 @@
                             from design to fabrication.
                         </p>
 
-                        <img loading="lazy" src="Engineering and Design Img/desiging.png" alt="">
+                        <img loading="lazy" src="Engineering and Design Img/desiging.jpg" alt="">
                     </div>
 
                 </div>               
@@ -644,7 +646,7 @@
         <div class="capabilities-right">
 
 
-            <img id="mainEngineeringImage" loading="lazy" src="Engineering and Design Img/Home.png"
+            <img id="mainEngineeringImage" loading="lazy" src="Engineering and Design Img/EnggDesign.png"
                 alt="Defence Manufacturing">
 
         </div>
@@ -678,7 +680,7 @@
                             applications under extreme conditions.
                         </p>
 
-                        <img loading="lazy" src="Research and Development Img/Embedded System.png" alt="">
+                        <img loading="lazy" src="Research and Development Img/Embedded System.jpg" alt="">
                     </div>
 
                 </div>
@@ -696,7 +698,7 @@
                             solutions for defence equipments.
                         </p>
 
-                        <img loading="lazy" src="Research and Development Img/Power Electronics.png" alt="">
+                        <img loading="lazy" src="Research and Development Img/Power Electronics.jpg" alt="">
                     </div>
 
                 </div>
@@ -715,8 +717,8 @@
                         </p>
 
                         <div style="display:flex; gap:10px;">
-                            <img loading="lazy" src="Research and Development Img/karamyogi 1.png" alt="Fiber Laser Cutting Machine" style="width:50%; margin:0;">
-                            <img loading="lazy" src="Research and Development Img/karamyogi 3.png" alt="TruLaser Cutting Machine" style="width:50%; margin:0;">
+                            <img loading="lazy" src="Research and Development Img/karamyogi 1.jpg" alt="Fiber Laser Cutting Machine" style="width:50%; margin:0;">
+                            <img loading="lazy" src="Research and Development Img/karamyogi 3.jpg" alt="TruLaser Cutting Machine" style="width:50%; margin:0;">
                         </div>
                     </div>
 
@@ -751,7 +753,7 @@
         <div class="capabilities-right">
 
 
-            <img id="mainReserachImage" loading="lazy" src="Research and Development Img/research and devlopment wing.png"
+            <img id="mainReserachImage" loading="lazy" src="Research and Development Img/research and devlopment wing.jpg"
                 alt="Defence Manufacturing">
 
         </div>
@@ -761,7 +763,7 @@
     <section class="defence-video-section">
 
         <!-- Background Video -->
-        <video autoplay muted loop playsinline class="bg-video">
+        <video autoplay muted loop playsinline preload="metadata" class="bg-video">
             <source src="Our Manufacturing Vdo/Our Manufacturing.mp4" type="video/mp4">
         </video>
 
