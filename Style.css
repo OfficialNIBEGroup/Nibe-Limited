@@ -658,6 +658,7 @@ HERO
     display:grid;
     grid-template-columns:30% 68%;
     gap:20px;
+    min-height: 800px;
 }
 /* ==========================
    LEFT CONTENT BOX
@@ -671,8 +672,8 @@ HERO
 }
 .content-box p{
     font-size:1.1rem;
-    line-height:1.5;
-    margin-bottom:25px;
+    line-height:1.7;
+    margin-bottom:35px;
 }
 .image-box img:hover{
     transform:scale(1.05);
@@ -688,13 +689,13 @@ HERO
 /* VIDEO */
 .video-box iframe{
     width:100%;
-    height:260px;
+    height:300px;
     display:block;
     border-radius:15px;
 }
 #aboutCompanyVideo{
     width:100%;
-    height:260px;
+    height:420px;
     display:block;
     border-radius:15px;
     object-fit:cover;
@@ -2870,6 +2871,75 @@ VAYUAASTRA SERIES
         text-align:center;
     }
 }
+
+/*======================================
+MEGHASTRA
+======================================*/
+.meghastra-section{
+    padding:120px 8%;
+    background:#fff;
+}
+.megh-container{
+    max-width:1450px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:48% 52%;
+    gap:70px;
+    align-items:center;
+}
+/* IMAGES */
+.megh-images{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+    align-items:center;
+}
+.megh-images img{
+    width:100%;
+    max-width:700px;
+    border-radius:18px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+    transition:.4s;
+    height: 400px;
+}
+.megh-images img:hover{
+    transform:scale(1.03);
+}
+/* CONTENT */
+.megh-content h2{
+    font-size:58px;
+    color:#16213E;
+    margin:12px 0;
+}
+.megh-content h5{
+    font-size:15px;
+    color:#44596f;
+    margin-bottom:18px;
+}
+.megh-content p{
+    font-size:16px;
+    line-height:1.7;
+    color:#5F6B7A;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .megh-container{
+        grid-template-columns:1fr;
+    }
+    .megh-images{
+        order:1;
+    }
+    .megh-content{
+        order:2;
+        text-align:center;
+    }
+}
+@media(max-width:768px){
+    .megh-content h2{
+        font-size:40px;
+    }
+}
+
 /*======================================
 30 MM PROXIMITY FUZE
 ======================================*/
