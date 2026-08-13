@@ -98,8 +98,7 @@
                 LAND SYSTEMS NAVIGATION
 ===========================================================-->
 
-<section class="land-nav-section">
-
+<section id="products-navigation" class="land-nav-section">
     <div class="land-nav-container">
 
         <!-- Heading -->
@@ -1210,6 +1209,54 @@
 
 </footer>
 </div>
+
+<!-- Back to Land Systems Products Navigation -->
+<button 
+    id="scrollToProductsBtn" 
+    class="scroll-to-products" 
+    aria-label="Back to products"
+    title="Back to Products">
+
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>TOP</span>
+
+</button>
+<script>
+
+    // Get the Back to Products button
+    const scrollToProductsBtn = document.getElementById("scrollToProductsBtn");
+
+    // Get the Product Navigation section
+    const productsNavigation = document.getElementById("products-navigation");
+
+
+    // Show button after scrolling down
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 500) {
+
+            scrollToProductsBtn.classList.add("show");
+
+        } else {
+
+            scrollToProductsBtn.classList.remove("show");
+
+        }
+
+    });
+
+
+    // When button is clicked
+    scrollToProductsBtn.addEventListener("click", function () {
+
+        productsNavigation.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    });
+
+</script>
 
 </body>
 </html>

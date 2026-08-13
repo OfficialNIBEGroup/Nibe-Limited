@@ -125,8 +125,7 @@
         ELECTRONICS NAVIGATION
 =========================================== -->
 
-    <section class="electronics-nav">
-
+<section id="products-navigation" class="electronics-nav">
         <div class="electronics-nav-container">
 
             <a href="#cable-harness">Cable Harness</a>
@@ -1161,7 +1160,52 @@
         </div>
 
     </footer>
+<button
+    id="scrollToProductsBtn"
+    class="scroll-to-products"
+    aria-label="Back to Products"
+    title="Back to Products">
 
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>TOP</span>
+
+</button>
+<script>
+
+    // Get the Back to Products button
+    const scrollToProductsBtn = document.getElementById("scrollToProductsBtn");
+
+    // Get the Product Navigation section
+    const productsNavigation = document.getElementById("products-navigation");
+
+
+    // Show button after scrolling down
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 500) {
+
+            scrollToProductsBtn.classList.add("show");
+
+        } else {
+
+            scrollToProductsBtn.classList.remove("show");
+
+        }
+
+    });
+
+
+    // When button is clicked
+    scrollToProductsBtn.addEventListener("click", function () {
+
+        productsNavigation.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    });
+
+</script>
 </body>
 
 </html>

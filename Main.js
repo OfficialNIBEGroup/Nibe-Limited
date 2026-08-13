@@ -666,3 +666,5 @@ document.querySelectorAll(".accordion").forEach(accordion => {
                 behavior: "smooth"
             });
         });
+
+        
