@@ -64,6 +64,15 @@ window.onload = function(){
 }
 
 
+function showFY2026(){
+
+    document.getElementById("financialResults")
+            .style.display = "none";
+
+    document.getElementById("fy2026Page")
+            .style.display = "block";
+}
+
 function showFY2025(){
 
     document.getElementById("financialResults")
@@ -101,6 +110,9 @@ function showFY2022(){
 }
 
 function backToFinancialResults(){
+
+     document.getElementById("fy2026Page")
+            .style.display = "none";
 
     document.getElementById("fy2025Page")
             .style.display = "none";
