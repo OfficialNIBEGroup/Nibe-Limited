@@ -183,7 +183,7 @@
                                 </tr>
                             </thead>
 
-                            <tbody>
+                            <tbody id="annualReportsTableBody">
 
                                 <tr>
                                     <td>1</td>
@@ -689,7 +689,7 @@
 
                         <a href="#" onclick="NoticeToStackholders(); return false;" class="Announcements-item">
 
-                            <span>Notice To Stackholders</span>
+                            <span>Notice to Stakeholders</span>
                             <span class="arrow">&#8250;</span>
 
                         </a>
@@ -854,6 +854,17 @@
 
                                 <tr>
                                     <td>1</td>
+                                    <td> Newspaper Advertisement on Unaudited Financial 
+                                    Results (Standalone and Consolidated) for the quarter ended June 30, 2026.</td>
+                                    <td>15-08-2026</td>
+                                    <td>
+                                        <a href="https://drive.google.com/file/d/1gku2cvFbWPP__3CQ2a7BGEudtwjXMUJP/view?usp=sharing"
+                                         target="_blank">View</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
                                     <td>Newspaper Advertisement on Audited Financial Results (Consolidated and
                                         Standalone) for the quarter and year ended March 31, 2026</td>
                                     <td>31/05/2026</td>
@@ -864,7 +875,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>2</td>
+                                    <td>3</td>
                                     <td>Newspaper Advertisement regarding Postal Ballot</td>
                                     <td>20/05/2026</td>
                                     <td>
@@ -1178,7 +1189,7 @@
                                 <tr>
                                     <td>2</td>
                                     <td>Statement of Deviation and Variation for the quarter ended June 30, 2026</td>
-                                    <td>30-06-2026</td>
+                                    <td>14-08-2026</td>
                                     <td>
                                         <a href="https://drive.google.com/file/d/1g0ThhRYjrVTpUhZqfDx91JZZoAtmKO-6/view?usp=sharing"
                                             target="_blank">View</a>
@@ -4396,6 +4407,49 @@
     </footer>
 
     <script src="Main.js"></script>
+    <script>
+async function loadAnnualReports() {
+    try {
+        const response = await fetch("/api/annual-reports/");
+
+        if (!response.ok) {
+            throw new Error("Failed to load annual reports");
+        }
+
+        const reports = await response.json();
+
+        const tableBody = document.getElementById("annualReportsTableBody");
+
+        // Clear the existing hard-coded rows
+        tableBody.innerHTML = "";
+
+        reports.forEach((report, index) => {
+
+            const documentUrl = report.pdf_file || report.external_url;
+
+            const row = `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${report.financial_year}</td>
+                    <td>
+                        <a href="${documentUrl}" target="_blank">
+                            View Report
+                        </a>
+                    </td>
+                </tr>
+            `;
+
+            tableBody.insertAdjacentHTML("beforeend", row);
+        });
+
+    } catch (error) {
+        console.error("Error loading annual reports:", error);
+    }
+}
+
+loadAnnualReports();
+</script>
+
 </body>
 
 </html>
