@@ -49,19 +49,22 @@ document.getElementById("sf2022Page").style.display = "none";
 
 }
 
-window.onload = function(){
-    document.getElementById('annualReports').style.display='block';
-    document.getElementById('financialResults').style.display='none';
-    document.getElementById('AnnualReturns').style.display='none';
-    document.getElementById('CorporateAnnouncements').style.display='none';
-    document.getElementById('showNewspaperPublication').style.display='none';
+window.onload = function () {
+    // Only run if we are on the investor page
+    if (!document.getElementById('annualReports')) return;
+
+    document.getElementById('annualReports').style.display = 'block';
+    document.getElementById('financialResults').style.display = 'none';
+    document.getElementById('AnnualReturns').style.display = 'none';
+    document.getElementById('CorporateAnnouncements').style.display = 'none';
+    document.getElementById('showNewspaperPublication').style.display = 'none';
     document.getElementById("showStockExchange").style.display = "none";
     document.getElementById("CorporateGovernance").style.display = "none";
     document.getElementById("ShareholdingPattern").style.display = "none";
     document.getElementById("Disclosure46").style.display = "none";
     document.getElementById("InvestorForms").style.display = "none";
     document.getElementById("SubsidiaryFinancials").style.display = "none";
-}
+};
 
 
 function showFY2026(){
