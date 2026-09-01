@@ -44,10 +44,10 @@ BREAKING NEWS
 =========================================*/
 .breaking-news{
     position:absolute;
-    top:20px;
+    top:25px;
     left:0;
     width:100%;
-    height:60px;
+    height:30px;
     display:flex;
     align-items:center;
     background:rgba(8,20,40,.92);
@@ -2273,32 +2273,28 @@ table th, table td{
 .contact-hero{
     max-width:1200px;
     margin:80px auto 50px;
-    padding:0 5%;
+   
+    display: flex;
+  flex-direction: column;
+  align-items: center;          /* centers both heading and paragraph */
+  text-align: center;           /* centers the text inside */
+  
 }
 .contact-hero h1{
-    font-size:70px;
-    font-weight:700;
-    color:#243449;
-    margin-bottom:25px;
-    position:relative;
-    display:inline-block;
-    margin-top:30px;
+    font-size: 70px;
+  font-weight: 700;
+  color: #2a3c53;
+  margin: 30px 0 25px;
+  position: relative;
+  display: inline-block;
 }
-.contact-hero h1::after{
-    content:'';
-    position:absolute;
-    right:-25px;
-    top:50%;
-    transform:translateY(-50%);
-    width:3px;
-    height:60px;
-    background:#333;
-}
+
 .contact-hero p{
-    max-width:600px;
-    font-size:18px;
-    line-height:1.8;
-    color:#444;
+   max-width: 900px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #444;
+  margin: 0 auto;
 }
 /* CONTACT SECTION */
 .contact-section{
@@ -2317,8 +2313,9 @@ table th, table td{
     gap:20px;
 }
 .info-card{
-    padding:35px;
+    padding-left:15px;
     border-radius:12px;
+    padding-bottom: 15px;
     color:#fff;
 }
 .blue{
@@ -2334,26 +2331,27 @@ border-left: 5px solid #4a90d9;
     margin-bottom:25px;
 }
 .info-card p{
-    margin-bottom:15px;
+    margin-bottom:10px;
     line-height:1.5;
+    font-weight: bold;
 }
 .info-card span{
     display:block;
-    margin-top:35px;
+    margin-top:20px;
     line-height:1.8;
     color: #000;
 }
 /* FORM */
 .contact-form{
     background:#f5f5f5;
-    padding:40px;
+    padding:30px;
     border-radius:12px;
     box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 .contact-form h2{
-    font-size:40px;
+    font-size:34px;
     margin-bottom:10px;
-    margin-top:100px;
+    
     color: #1f5aa6;
 }
 .contact-form p{
@@ -2401,7 +2399,8 @@ border-left: 5px solid #4a90d9;
     padding:0 5%;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px;
+    gap:80px;
+    height: 400px;
 }
 .office-card{
     background:#fff;
@@ -2410,7 +2409,7 @@ border-left: 5px solid #4a90d9;
     box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 .office-card h3{
-    padding:25px 25px 5px;
+    padding:0px 25px 0px;
     font-size:32px;
 }
 .office-card h4{
@@ -2419,13 +2418,10 @@ border-left: 5px solid #4a90d9;
 }
 .office-card iframe{
     width:100%;
-    height:300px;
+    height:250px;
     border:none;
 }
-.office-card p{
-    padding:25px;
-    line-height:1.8;
-}
+
 /* RESPONSIVE */
 @media(max-width:991px){
     .contact-section{
@@ -2715,7 +2711,7 @@ GARUDASTRA
     overflow:hidden;
     box-shadow:0 15px 35px rgba(0,0,0,.15);
     width:100%;
-    max-width:850px;
+    max-width:750px;
     margin:auto;
 }
 /* RESPONSIVE */
@@ -3033,14 +3029,15 @@ SILVER BULLET
 }
 /* Image */
 .silver-image{
-    margin:70px auto;
+    margin:30px 50px;
     max-width:700px;
 }
 .silver-image img{
-    width:100%;
+    width:900px;
     display:block;
     border-radius:20px;
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    
 }
 /* Description */
 .silver-description{
@@ -3529,16 +3526,16 @@ LAND FOOTER
     width:100%;
   background: linear-gradient(180deg, #eaf5ff 0%, #b8d9f8 50%, #71b0ee 100%);
     border-top:0px solid #dfe5ec;
-    border-radius: 30px 30px 30px 30px;   /* rounded top-left & top-right edges */
+    border-radius: 30px 30px 0px 0px;   /* rounded top-left & top-right edges */
     overflow: hidden;
-    
+    height: 320px;
 }
 /*=========================
 Main
 =========================*/
 .land-footer-main{
     display:grid;
-    grid-template-columns:140px 1fr 1fr;
+    grid-template-columns:140px 2fr 2fr 2fr;
     align-items:center;
     gap:10px;
     padding:25px 6%;
@@ -3556,7 +3553,7 @@ Main
 }
 /* Column */
 .footer-column h4{
-    font-size:22px;
+    font-size:20px;
     color:#031955;
     margin-bottom:10px;
 }
@@ -6669,7 +6666,7 @@ SHARED ROCKET CORE
 .ims-image{
     flex:1;
 
-    background:#f2f5f9;
+    
 
     border-radius:18px;
 
