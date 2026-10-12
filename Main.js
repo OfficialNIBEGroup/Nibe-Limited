@@ -281,6 +281,14 @@ function StockExchangeExclosers() {
     document.getElementById("showStockExchange").style.display = "block";
 }
 
+function showCG2026(){
+
+    document.getElementById("CorporateGovernance")
+            .style.display = "none";
+
+    document.getElementById("cg2026Page")
+            .style.display = "block";
+}
 
 function showCG2025(){
 
@@ -319,6 +327,7 @@ function showCG2022(){
 }
 
 function backToCorporateGovernance(){
+    document.getElementById("cg2026Page").style.display = "none";
 
     document.getElementById("cg2025Page").style.display = "none";
     document.getElementById("cg2024Page").style.display = "none";
